@@ -1,0 +1,28 @@
+name = "template_name"
+version = "1.0.0"
+type = "text"
+production_host = "apricot-viper-nedda-g322swq4.bls.dev"
+
+[deployment]
+permission = "public"
+nodes = 1
+
+[build]
+dir = "build"
+entry = "template_name_debug.wasm"
+command = "npm run build:debug"
+
+[build_release]
+dir = "build"
+entry = "template_name.wasm"
+command = "npm run build:release"
+
+[[deployments]]
+name = "blessnet"
+description = ""
+cid = "bafybeice57aqyaosfvc4fi4mxs7hualfazvpguubqus6pp2xewobnmzcea"
+created = "2025-05-02T12:51:13.909Z"
+
+  [deployments.runtime]
+  url = "blessnet.tar.gz"
+  checksum = "8f38960e2e464a123dd03627a468d9dce9dea0618704b05e992185d0e14d2585"
